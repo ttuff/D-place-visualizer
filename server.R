@@ -2,7 +2,7 @@ options(rgl.useNULL=TRUE)
 
 require(shiny)
 require(shinydashboard)
-
+require(raster)
 require(ape)
 require(phytools)
 #require(diversitree)
@@ -21,9 +21,7 @@ shinyServer(function(input, output, session) {
   r_colors <- rgb(t(col2rgb(colors()) / 255))
   names(r_colors) <- colors()
   
-  load("~/Box Sync/colliding ranges/Simulations_humans/Concatenated data tables/FULL_TREE_Society_data_with_binary_conversions_with_labels.Rdata")
   
-  names(FULL_TREE_Society_data_with_binary_conversions_with_labels)
   
   pal <- colorFactor(c("gold", "red"), domain = c(0,1), na.color="transparent")
   
