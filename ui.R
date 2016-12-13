@@ -1,13 +1,11 @@
 options(rgl.useNULL=TRUE)
    
-library(shiny)
-library(shinydashboard)
-library(scales)
-library(shinyRGL)
-library(rglwidget)
-library(leaflet)
-library(rgdal)
-library(RColorBrewer)
+require(shiny)
+require(shinydashboard)
+
+require(leaflet)
+
+require(RColorBrewer)
 
 r_colors <- rgb(t(col2rgb(colors()) / 255))
 names(r_colors) <- colors()

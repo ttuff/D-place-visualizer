@@ -1,24 +1,18 @@
 options(rgl.useNULL=TRUE)
 
-library(shiny)
-library(shinydashboard)
-library(scales)
-library(shinyRGL)
-library(rgl)
-library(ape)
+require(shiny)
+require(shinydashboard)
+
+require(ape)
 require(phytools)
 #require(diversitree)
 #source("https://bioconductor.org/biocLite.R")
 #biocLite("ggtree")
 #biocLite("ggtree", type = "source")
-library(ggtree)
+require(ggtree)
 require(spdep)
-require(letsR)
-require(raster)
-library(rglwidget)
-library(leaflet)
-require(graphics)
-library(mapview)
+
+require(leaflet)
 
 
 # Define server logic required to draw a histogram
