@@ -13,6 +13,7 @@ require(ggtree)
 require(spdep)
 require(mapview)
 require(leaflet)
+require(RColorBrewer)
 
 
 # Define server logic required to draw a histogram

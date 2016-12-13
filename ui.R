@@ -2,9 +2,17 @@ options(rgl.useNULL=TRUE)
    
 require(shiny)
 require(shinydashboard)
-
+require(raster)
+require(ape)
+require(phytools)
+#require(diversitree)
+#source("https://bioconductor.org/biocLite.R")
+#biocLite("ggtree")
+#biocLite("ggtree", type = "source")
+require(ggtree)
+require(spdep)
+require(mapview)
 require(leaflet)
-
 require(RColorBrewer)
 
 r_colors <- rgb(t(col2rgb(colors()) / 255))
