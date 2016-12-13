@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
     plant_potential <- raster("www/richnobuf.asc")
     
     load('www/ClimateDataRaster_ElevDownscaled.2016.Rdata')
-    load('www/complete.RData')
+   
     load('www/TempHarsh_raster.Rdata')
     load('www/XeroHarsh_raster.Rdata')
     
@@ -46,7 +46,7 @@ shinyServer(function(input, output, session) {
     
     raster_list <-  list(AmphibianDiv_raster  ,                Biomes_raster   ,                     
                          BirdDiv_raster           ,             Cn_raster      ,                      
-                         complete            ,                  Continents       ,                    
+                         Continents            ,                  Continents       ,                    
                          Cp_raster                 ,            Cp_raster1950    ,                    
                          Ct_raster                  ,           Ct_raster1950      ,                  
                          EcoRegions_raster    ,                 Elev_raster         ,                 
@@ -187,7 +187,7 @@ shinyServer(function(input, output, session) {
     plant_potential <- raster("www/richnobuf.asc")
     
     load('www/ClimateDataRaster_ElevDownscaled.2016.Rdata')
-    load('www/complete.RData')
+    
     load('www/TempHarsh_raster.Rdata')
     load('www/XeroHarsh_raster.Rdata')
     
@@ -195,7 +195,7 @@ shinyServer(function(input, output, session) {
     
     raster_list <-  list(AmphibianDiv_raster  ,                Biomes_raster   ,                     
                          BirdDiv_raster           ,             Cn_raster      ,                      
-                         complete            ,                  Continents       ,                    
+                         Continents            ,                  Continents       ,                    
                          Cp_raster                 ,            Cp_raster1950    ,                    
                          Ct_raster                  ,           Ct_raster1950      ,                  
                          EcoRegions_raster    ,                 Elev_raster         ,                 
