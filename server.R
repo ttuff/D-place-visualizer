@@ -30,28 +30,13 @@ shinyServer(function(input, output, session) {
     
     objects()
     
-    raster_list <-  list(AmphibianDiv_raster  ,                Biomes_raster   ,                     
-                         BirdDiv_raster           ,             Cn_raster      ,                      
-                         Continents            ,                  Continents       ,                    
-                         Cp_raster                 ,            Cp_raster1950    ,                    
-                         Ct_raster                  ,           Ct_raster1950      ,                  
-                         EcoRegions_raster    ,                 Elev_raster         ,                 
-                         Glaciation                 ,           LocalHeterogeneity_raster   ,         
-                         MammalDiv_raster     ,                 MeanN_raster           ,              
-                         MeanP_raster           ,               MeanP_raster1950     ,                
-                         MeanT_raster         ,                MeanT_raster1950   ,                  
-                         Mn_raster               ,              Mp_raster            ,                
-                         Mp_raster1950       ,                 Mt_raster    ,                        
-                         Mt_raster1950          ,              OlsonEcoregions_raster   ,            
-                         OlsonEcoregions.CategoryNames     ,    Pn_raster      ,                      
-                         Pp_raster             ,                Pp_raster1950    ,                    
-                         Pt_raster            ,                 Pt_raster1950  ,                      
-                         Sand_raster   ,                       
-                         Slope_raster      ,                    TempHarsh_raster  ,                   
-                         VarN_raster        ,                   VarP_raster      ,                    
-                         VarP_raster1950   ,                    VarT_raster     ,                     
-                         VarT_raster1950        ,               VascPlant_CoKrig_KreftJetz2007_raster,
-                         XeroHarsh_raster , plant_potential, plant_potential, plant_potential, plant_potential)
+    raster_list <-  list( Biomes_raster, Biomes_raster, Biomes_raster, EcoRegions_raster, OlsonEcoregions_raster, AmphibianDiv_raster, BirdDiv_raster, 
+                          MammalDiv_raster, VascPlant_CoKrig_KreftJetz2007_raster, plant_potential,Elev_raster, Slope_raster, 
+                          Glaciation, Sand_raster, LocalHeterogeneity_raster, MeanN_raster, MeanP_raster, MeanP_raster1950,
+                          MeanT_raster, MeanT_raster1950, VarN_raster, VarP_raster, VarP_raster1950,  VarT_raster ,                     
+                          VarT_raster1950 , TempHarsh_raster, XeroHarsh_raster, Pn_raster, Pp_raster, Pp_raster1950,                    
+                          Pt_raster, Pt_raster1950, Cn_raster, Cp_raster , Cp_raster1950, Ct_raster ,  Ct_raster1950,
+                          Mp_raster, Mp_raster1950, Mt_raster, Mt_raster1950)
     
     r <- raster_list[[as.numeric(input$raster_layer_1)]]
     
@@ -104,49 +89,51 @@ shinyServer(function(input, output, session) {
     dim(binary_traits)
     
     legend_label <-  c(
-      "Amphibian diversity" ,                  
-      "Biomes"  ,                       
-      "Bird Diversity"   ,                     
-      "Cn_raster"  ,                          
-      "complete"  ,                             
-      "Continents"  ,                          
-      "Cp_raster"   ,                           
-      "Cp_raster1950"  ,                       
-      "Ct_raster"   ,                          
-      "Ct_raster1950"   ,                      
-      "EcoRegions_raster"  ,                  
-      "Elevation"  ,                        
-      "Glaciation"  ,                          
-      "Local Heterogeneity"  ,           
-      "Mammal Diversity"    ,                   
-      "MeanN_raster"  ,                       
-      "MeanP_raster"   ,                       
-      "MeanP_raster1950"    ,                  
-      "MeanT_raster"  ,                       
-      "MeanT_raster1950"    ,                  
-      "Mn_raster"  ,                          
-      "Mp_raster"   ,                          
-      "Mp_raster1950"    ,                     
-      "Mt_raster"       ,                     
-      "Mt_raster1950"   ,                       
-      "Olson Ecoregions"   ,            
-      "OlsonEcoregions.CategoryNames"    ,      
-      "Pn_raster"   ,                          
-      "Pp_raster"  ,                           
-      "Pp_raster1950"      ,                  
-      "Pt_raster"   ,                          
-      "Pt_raster1950"   ,                                                   
-      "Sand types"   ,                       
-      "Topographic Slope"    ,                     
-      "Temperature Harshness"      ,                
-      "VarN_raster"     ,                     
-      "VarP_raster"     ,                     
-      "VarP_raster1950" ,                     
-      "VarT_raster"      ,                     
-      "VarT_raster1950"   ,                     
-      "Vascular Plants",
-      "Xero Harshness"     ,
-      "domesticatable species"     
+      
+      "no layer",
+      "    " ,
+      "Biomes"  , 
+      "EcoRegions"   ,
+      "Olson Ecoregions"  ,            
+      "Amphibian diversity" ,                 
+      "Bird diversity"  , 
+      "Mammal Diversiy"  ,
+      "Vascular Plant diversity from Kreft and Jetz 2007",
+      "Potential domesticable speciess" ,
+      "Elevation" , 
+      "Slope"    ,
+      "Glaciation"  ,  
+      "Sand type"   ,                       
+      "Local Heterogeneity"  , 
+      "Mean NPP"  ,                       
+      "Mean Precipitation"  ,                       
+      "Mean P_1950"   ,                  
+      "Mean T"  ,                       
+      "Mean T_1950"    ,   
+      "Variance NPP"     ,                     
+      "Variance precipitation"     ,                     
+      "Variance precipitation 1950"  ,                     
+      "Variance temperature"     ,                     
+      "Variance temperature 1950"   , 
+      "Temperature Harshness"     ,                
+      "Xero Harshness"       ,
+      
+      "Predicability NPP"   ,                          
+      "Predicability precipitation"  ,                           
+      "Predicability precipitation 1950"   ,                  
+      "Predicability temperature"   ,                          
+      "Predicability temperature 1950"   ,    
+      "Constancy NPP"  ,                          
+      "Constancy precipitation"  ,                           
+      "Constancy precipitation 1950" ,                       
+      "Constancy temperature"   ,                          
+      "Constancy temperature 1950"   ,       
+      "Contingency NPP"  ,                          
+      "Contingency precipitation"   ,                          
+      "Contingency precipitation 1950"   ,                     
+      "Contingency temperature"      ,                     
+      "Contingency temperature 1950"                         
+      
     )
     
     pall <- colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"), values(r),
@@ -166,7 +153,7 @@ shinyServer(function(input, output, session) {
   
  
   
-  if(as.numeric(input$raster_layer_1) == 44 || as.numeric(input$raster_layer_1) == 45){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
+  if(as.numeric(input$raster_layer_1) == 1 || as.numeric(input$raster_layer_1) == 2){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
     addLegend(pal = pall, position="bottomleft" ,values = values(r),
               title = legend_label[as.numeric(input$raster_layer_1)])}  
   })
@@ -186,28 +173,15 @@ shinyServer(function(input, output, session) {
     
     objects()
     
-    raster_list <-  list(AmphibianDiv_raster  ,                Biomes_raster   ,                     
-                         BirdDiv_raster           ,             Cn_raster      ,                      
-                         Continents            ,                  Continents       ,                    
-                         Cp_raster                 ,            Cp_raster1950    ,                    
-                         Ct_raster                  ,           Ct_raster1950      ,                  
-                         EcoRegions_raster    ,                 Elev_raster         ,                 
-                         Glaciation                 ,           LocalHeterogeneity_raster   ,         
-                         MammalDiv_raster     ,                 MeanN_raster           ,              
-                         MeanP_raster           ,               MeanP_raster1950     ,                
-                         MeanT_raster         ,                MeanT_raster1950   ,                  
-                         Mn_raster               ,              Mp_raster            ,                
-                         Mp_raster1950       ,                 Mt_raster    ,                        
-                         Mt_raster1950          ,              OlsonEcoregions_raster   ,            
-                         OlsonEcoregions.CategoryNames     ,    Pn_raster      ,                      
-                         Pp_raster             ,                Pp_raster1950    ,                    
-                         Pt_raster            ,                 Pt_raster1950  ,                      
-                         Sand_raster   ,                       
-                         Slope_raster      ,                    TempHarsh_raster  ,                   
-                         VarN_raster        ,                   VarP_raster      ,                    
-                         VarP_raster1950   ,                    VarT_raster     ,                     
-                         VarT_raster1950        ,               VascPlant_CoKrig_KreftJetz2007_raster,
-                         XeroHarsh_raster , plant_potential, plant_potential, plant_potential, plant_potential)
+    raster_list <-  list( Biomes_raster, Biomes_raster, Biomes_raster, EcoRegions_raster, OlsonEcoregions_raster, AmphibianDiv_raster, BirdDiv_raster, 
+                          MammalDiv_raster, VascPlant_CoKrig_KreftJetz2007_raster, plant_potential,Elev_raster, Slope_raster, 
+                          Glaciation, Sand_raster, LocalHeterogeneity_raster, MeanN_raster, MeanP_raster, MeanP_raster1950,
+                          MeanT_raster, MeanT_raster1950, VarN_raster, VarP_raster, VarP_raster1950,  VarT_raster ,                     
+                          VarT_raster1950 , TempHarsh_raster, XeroHarsh_raster, Pn_raster, Pp_raster, Pp_raster1950,                    
+                          Pt_raster, Pt_raster1950, Cn_raster, Cp_raster , Cp_raster1950, Ct_raster ,  Ct_raster1950,
+                          Mp_raster, Mp_raster1950, Mt_raster, Mt_raster1950)
+    
+    
     
     r <- raster_list[[as.numeric(input$raster_layer_2)]]
     
@@ -260,49 +234,51 @@ shinyServer(function(input, output, session) {
     dim(binary_traits)
     
     legend_label <-  c(
-      "Amphibian diversity" ,                  
-      "Biomes"  ,                       
-      "Bird Diversity"   ,                     
-      "Cn_raster"  ,                          
-      "complete"  ,                             
-      "Continents"  ,                          
-      "Cp_raster"   ,                           
-      "Cp_raster1950"  ,                       
-      "Ct_raster"   ,                          
-      "Ct_raster1950"   ,                      
-      "EcoRegions_raster"  ,                  
-      "Elevation"  ,                        
-      "Glaciation"  ,                          
-      "Local Heterogeneity"  ,           
-      "Mammal Diversity"    ,                   
-      "MeanN_raster"  ,                       
-      "MeanP_raster"   ,                       
-      "MeanP_raster1950"    ,                  
-      "MeanT_raster"  ,                       
-      "MeanT_raster1950"    ,                  
-      "Mn_raster"  ,                          
-      "Mp_raster"   ,                          
-      "Mp_raster1950"    ,                     
-      "Mt_raster"       ,                     
-      "Mt_raster1950"   ,                       
-      "Olson Ecoregions"   ,            
-      "OlsonEcoregions.CategoryNames"    ,      
-      "Pn_raster"   ,                          
-      "Pp_raster"  ,                           
-      "Pp_raster1950"      ,                  
-      "Pt_raster"   ,                          
-      "Pt_raster1950"   ,                                                   
-      "Sand types"   ,                       
-      "Topographic Slope"    ,                     
-      "Temperature Harshness"      ,                
-      "VarN_raster"     ,                     
-      "VarP_raster"     ,                     
-      "VarP_raster1950" ,                     
-      "VarT_raster"      ,                     
-      "VarT_raster1950"   ,                     
-      "Vascular Plants",
-      "Xero Harshness"     ,
-      "domesticatable species"     
+      
+      "no layer",
+      "    " ,
+      "Biomes"  , 
+      "EcoRegions"   ,
+      "Olson Ecoregions"  ,            
+      "Amphibian diversity" ,                 
+      "Bird diversity"  , 
+      "Mammal Diversiy"  ,
+      "Vascular Plant diversity from Kreft and Jetz 2007",
+      "Potential domesticable speciess" ,
+      "Elevation" , 
+      "Slope"    ,
+      "Glaciation"  ,  
+      "Sand type"   ,                       
+      "Local Heterogeneity"  , 
+      "Mean NPP"  ,                       
+      "Mean Precipitation"  ,                       
+      "Mean P_1950"   ,                  
+      "Mean T"  ,                       
+      "Mean T_1950"    ,   
+      "Variance NPP"     ,                     
+      "Variance precipitation"     ,                     
+      "Variance precipitation 1950"  ,                     
+      "Variance temperature"     ,                     
+      "Variance temperature 1950"   , 
+      "Temperature Harshness"     ,                
+      "Xero Harshness"       ,
+      
+      "Predicability NPP"   ,                          
+      "Predicability precipitation"  ,                           
+      "Predicability precipitation 1950"   ,                  
+      "Predicability temperature"   ,                          
+      "Predicability temperature 1950"   ,    
+      "Constancy NPP"  ,                          
+      "Constancy precipitation"  ,                           
+      "Constancy precipitation 1950" ,                       
+      "Constancy temperature"   ,                          
+      "Constancy temperature 1950"   ,       
+      "Contingency NPP"  ,                          
+      "Contingency precipitation"   ,                          
+      "Contingency precipitation 1950"   ,                     
+      "Contingency temperature"      ,                     
+      "Contingency temperature 1950"                         
+      
     )
     
     pall <- colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"), values(r),
@@ -321,7 +297,7 @@ shinyServer(function(input, output, session) {
     
     
     
-    if(as.numeric(input$raster_layer_1) == 44 || as.numeric(input$raster_layer_2) == 45){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
+    if(as.numeric(input$raster_layer_1) == 1 || as.numeric(input$raster_layer_2) == 2){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
         addLegend(pal = pall, position="bottomright" ,values = values(r),
                   title = legend_label[as.numeric(input$raster_layer_2)])}  
   })
