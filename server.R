@@ -9,7 +9,7 @@ require(phytools)
 #source("https://bioconductor.org/biocLite.R")
 #biocLite("ggtree")
 #biocLite("ggtree", type = "source")
-library(ggtree)
+#library(ggtree)
 require(spdep)
 require(mapview)
 require(leaflet)
@@ -416,13 +416,13 @@ shinyServer(function(input, output, session) {
       col_vector <- c("gold", "red", "white")[as.factor(as.character(binary_traits[, as.numeric(input$trait_choose_1)]))]
       length(col_vector)
       
-      p <- ggtree(tree_choice, layout="circular", size=0.25) + geom_tippoint(color= col_vector, shape=19, size=2) + geom_tiplab(aes(angle=angle), color= col_vector, size=.5) 
-      
-      
-      
+      #p <- ggtree(tree_choice, layout="circular", size=0.25) + geom_tippoint(color= col_vector, shape=19, size=2) + geom_tiplab(aes(angle=angle), color= col_vector, size=.5) 
+      par(mar=c(0,0,0,0))
+      plot(tree_choice, type="fan",  show.tip.label=FALSE)
+      tiplabels(pch=19, col=col_vector)
        
-      open_tree(p, angle=50)
-      rotate_tree(p, angle=80)
+      #open_tree(p, angle=50)
+      #rotate_tree(p, angle=80)
       
       
     }) 
@@ -473,6 +473,7 @@ shinyServer(function(input, output, session) {
       axis(1, line=2)
     })
     
+  setwd("~/GitHub/D-place-visualiser")
     output$Traits_on_trees_2 <- renderPlot({
       
       if("Full" == input$tree_choose_2){
@@ -511,13 +512,15 @@ shinyServer(function(input, output, session) {
       col_vector <- c("gold", "red", "white")[as.factor(as.character(binary_traits[, as.numeric(input$trait_choose_2)]))]
       length(col_vector)
       
-      p <- ggtree(tree_choice, layout="circular", size=0.25) + geom_tippoint(color= col_vector, shape=19, size=2) + geom_tiplab(aes(angle=angle), color= col_vector, size=.5) 
+     # p <- ggtree(tree_choice, layout="circular", size=0.25) + geom_tippoint(color= col_vector, shape=19, size=2) + geom_tiplab(aes(angle=angle), color= col_vector, size=.5) 
+      
+      par(mar=c(0,0,0,0))
+      plot(tree_choice, type="fan",  show.tip.label=FALSE)
+      tiplabels(pch=19, col=col_vector)
       
       
-      
-      
-      open_tree(p, angle=50)
-      rotate_tree(p, angle=80)
+     # open_tree(p, angle=50)
+     # rotate_tree(p, angle=80)
       
       
     })
