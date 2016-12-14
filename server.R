@@ -77,7 +77,7 @@ shinyServer(function(input, output, session) {
       load('www/Tree_Pama_Nyungan.RData')
       tree_choice <- pama_nyungan_tree
       binary_traits <- UTO_Society_data_with_binary_conversions}
-    if("Austronisian" == input$tree_choose_1){
+    if("Austronesian" == input$tree_choose_1){
       load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
       load('www/Tree_austronisian_trimmed.RData')
       tree_choice <- aus_tree
@@ -222,7 +222,7 @@ shinyServer(function(input, output, session) {
       load('www/Tree_Pama_Nyungan.RData')
       tree_choice <- pama_nyungan_tree
       binary_traits <- UTO_Society_data_with_binary_conversions}
-    if("Austronisian" == input$tree_choose_2){
+    if("Austronesian" == input$tree_choose_2){
       load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
       load('www/Tree_austronisian_trimmed.RData')
       tree_choice <- aus_tree
@@ -343,7 +343,7 @@ shinyServer(function(input, output, session) {
         load('www/Tree_Pama_Nyungan.RData')
         tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Austronisian" == input$tree_choose_1){
+      if("Austronesian" == input$tree_choose_1){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_austronisian_trimmed.RData')
         tree_choice <- aus_tree
@@ -392,7 +392,7 @@ shinyServer(function(input, output, session) {
         load('www/Tree_Pama_Nyungan.RData')
         tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Austronisian" == input$tree_choose_1){
+      if("Austronesian" == input$tree_choose_1){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_austronisian_trimmed.RData')
         tree_choice <- aus_tree
@@ -450,7 +450,7 @@ shinyServer(function(input, output, session) {
         load('www/Tree_Pama_Nyungan.RData')
         tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Austronisian" == input$tree_choose_2){
+      if("Austronesian" == input$tree_choose_2){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_austronisian_trimmed.RData')
         tree_choice <- aus_tree
@@ -498,7 +498,7 @@ shinyServer(function(input, output, session) {
         load('www/Tree_Pama_Nyungan.RData')
         tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Austronisian" == input$tree_choose_2){
+      if("Austronesian" == input$tree_choose_2){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_austronisian_trimmed.RData')
         tree_choice <- aus_tree

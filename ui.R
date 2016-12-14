@@ -38,8 +38,8 @@ shinyUI(dashboardPage( skin="black",
                              #plotOutput("trait_binary_bar_2", width = "100%", height = "300px")
                               width=12))
               ),
-                fluidRow(
-                  tags$style(type = "text/css", "html, body {width:100%;height:100%}"),  
+                fluidRow( 
+                  tags$style(type = "text/css", "html, body {width:100%;height:150%}"),  
                 column(6, column(4, selectInput("trait_choose_1", label=h3("Choose a trait"), choices = list(
                                "no points" = 48,
                                 "     " = 49,
@@ -126,7 +126,7 @@ shinyUI(dashboardPage( skin="black",
                               selectInput("tree_choose_1", label=h3("Choose a tree"), choices = list(
                                 "Full", 
                                 "Bantu",
-                                "Austronisian",
+                                "Austronesian",
                                 "Uto"
                               ), selected="Full")
                               
@@ -225,7 +225,7 @@ shinyUI(dashboardPage( skin="black",
                                     selectInput("tree_choose_2", label=h3("Choose a tree"), choices = list(
                                       "Full", 
                                       "Bantu",
-                                      "Austronisian",
+                                      "Austronesian",
                                       "Uto"
                                     ), selected="Full")
                                     
