@@ -132,10 +132,11 @@ shinyUI(dashboardPage( skin="black",
                               ), selected=45),
                               selectInput("tree_choose_1", label=h3("Choose a tree"), choices = list(
                                 "Full", 
-                                "Uto",
                                 "Bantu",
+                                "Austronisian",
+                                "Uto",
                                 "Indo-european",
-                                "Austronisian"
+                                "Pama-Nyungan"
                               ), selected="Full")
                               
                               ),
@@ -233,10 +234,11 @@ shinyUI(dashboardPage( skin="black",
                                     ), selected=45),
                                     selectInput("tree_choose_2", label=h3("Choose a tree"), choices = list(
                                       "Full", 
-                                      "Uto",
                                       "Bantu",
+                                      "Austronisian",
+                                      "Uto",
                                       "Indo-european",
-                                      "Austronisian"
+                                      "Pama-Nyungan"
                                     ), selected="Full")
                                     
                                     )
