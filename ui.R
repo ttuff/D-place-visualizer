@@ -41,6 +41,8 @@ shinyUI(dashboardPage( skin="black",
                 fluidRow(
                   tags$style(type = "text/css", "html, body {width:100%;height:100%}"),  
                 column(6, column(4, selectInput("trait_choose_1", label=h3("Choose a trait"), choices = list(
+                               "no points" = 48,
+                                "     " = 49,
                                 "Subsistence on Hunting and Gathering" = 19, 
                                 "Subsistence on Fish" = 20,
                                 "Subsistence on Husbandry" = 21,           
@@ -68,9 +70,8 @@ shinyUI(dashboardPage( skin="black",
                                 "Slavery"       = 43,              
                                 "Land Inheritance"    = 44,         
                                 "Movable Property inheritance" =45,
-                                "House Shape" = 46,
-                                "no points" = 48,
-                                "     " = 49
+                                "House Shape" = 46
+                                
                               ), selected=49),
                               
                               
@@ -140,6 +141,8 @@ shinyUI(dashboardPage( skin="black",
                              column(6, column(8, plotOutput("Traits_on_trees_2", width = "100%", height = "350px"),
                                            plotOutput("trait_binary_bar_2", width = "100%", height = "150px")),
                                     column(4, selectInput("trait_choose_2", label=h3("Choose a trait"), choices = list(
+                                      "no points" = 48,
+                                      "     " = 49,
                                       "Subsistence on Hunting and Gathering" = 19, 
                                       "Subsistence on Fish" = 20,
                                       "Subsistence on Husbandry" = 21,           
@@ -167,9 +170,7 @@ shinyUI(dashboardPage( skin="black",
                                       "Slavery"       = 43,              
                                       "Land Inheritance"    = 44,         
                                       "Movable Property inheritance" =45,
-                                      "House Shape" = 46,
-                                      "no points" = 48,
-                                      "     " = 49
+                                      "House Shape" = 46
                                     ), selected=49),
                                     
                                     

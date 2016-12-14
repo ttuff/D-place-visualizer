@@ -155,7 +155,7 @@ shinyServer(function(input, output, session) {
   
   if(as.numeric(input$raster_layer_1) == 1 || as.numeric(input$raster_layer_1) == 2){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
     addLegend(pal = pall, position="bottomleft" ,values = values(r),
-              title = legend_label[as.numeric(input$raster_layer_1)])}  
+              title = legend_label[as.numeric(input$raster_layer_1)]) %>% setView(0,10,1)}  
   })
   
   
@@ -297,9 +297,9 @@ shinyServer(function(input, output, session) {
     
     
     
-    if(as.numeric(input$raster_layer_1) == 1 || as.numeric(input$raster_layer_2) == 2){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
+    if(as.numeric(input$raster_layer_2) == 1 || as.numeric(input$raster_layer_2) == 2){leaf} else {leaf %>%  addRasterImage(r, opacity = 0.8, colors=pall) %>%
         addLegend(pal = pall, position="bottomright" ,values = values(r),
-                  title = legend_label[as.numeric(input$raster_layer_2)])}  
+                  title = legend_label[as.numeric(input$raster_layer_2)]) %>% setView(0,10,1)}  
   })
   
   
