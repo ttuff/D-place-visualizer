@@ -473,7 +473,7 @@ shinyServer(function(input, output, session) {
       axis(1, line=2)
     })
     
-  setwd("~/GitHub/D-place-visualiser")
+ 
     output$Traits_on_trees_2 <- renderPlot({
       
       if("Full" == input$tree_choose_2){
