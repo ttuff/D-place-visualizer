@@ -127,9 +127,7 @@ shinyUI(dashboardPage( skin="black",
                                 "Full", 
                                 "Bantu",
                                 "Austronisian",
-                                "Uto",
-                                "Indo-european",
-                                "Pama-Nyungan"
+                                "Uto"
                               ), selected="Full")
                               
                               ),
@@ -229,9 +227,7 @@ shinyUI(dashboardPage( skin="black",
                                       "Full", 
                                       "Bantu",
                                       "Austronisian",
-                                      "Uto",
-                                      "Indo-european",
-                                      "Pama-Nyungan"
+                                      "Uto"
                                     ), selected="Full")
                                     
                                     )
