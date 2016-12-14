@@ -91,8 +91,13 @@ shinyServer(function(input, output, session) {
       binary_traits <- BANTU_Society_data_with_binary_conversions}
     if("Indo-european" == input$tree_choose_1){
       load('www/UTO_Society_data_with_binary_conversions.Rdata')
-      load('www/Tree_Uto_trimmed.RData')
-      tree_choice <- uto_tree
+      load('www/Tree_IE.RData')
+      tree_choice <-  IE_tree
+      binary_traits <- UTO_Society_data_with_binary_conversions}
+    if("Pama-Nyungan" == input$tree_choose_1){
+      load('www/UTO_Society_data_with_binary_conversions.Rdata')
+      load('www/Tree_Pama_Nyungan.RData')
+      tree_choice <- pama_nyungan_tree
       binary_traits <- UTO_Society_data_with_binary_conversions}
     if("Austronisian" == input$tree_choose_1){
       load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
@@ -242,8 +247,13 @@ shinyServer(function(input, output, session) {
       binary_traits <- BANTU_Society_data_with_binary_conversions}
     if("Indo-european" == input$tree_choose_2){
       load('www/UTO_Society_data_with_binary_conversions.Rdata')
-      load('www/Tree_Uto_trimmed.RData')
-      tree_choice <- uto_tree
+      load('www/Tree_IE.RData')
+      tree_choice <-  IE_tree
+      binary_traits <- UTO_Society_data_with_binary_conversions}
+    if("Pama-Nyungan" == input$tree_choose_2){
+      load('www/UTO_Society_data_with_binary_conversions.Rdata')
+      load('www/Tree_Pama_Nyungan.RData')
+      tree_choice <- pama_nyungan_tree
       binary_traits <- UTO_Society_data_with_binary_conversions}
     if("Austronisian" == input$tree_choose_2){
       load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
@@ -314,7 +324,6 @@ shinyServer(function(input, output, session) {
                        stroke = FALSE, fillOpacity = 1,
                        popup = ~popup_text
       ) 
-    
     #%>% addMouseCoordinates()
     
     
@@ -357,8 +366,13 @@ shinyServer(function(input, output, session) {
         binary_traits <- BANTU_Society_data_with_binary_conversions}
       if("Indo-european" == input$tree_choose_1){
         load('www/UTO_Society_data_with_binary_conversions.Rdata')
-        load('www/Tree_Uto_trimmed.RData')
-        tree_choice <- uto_tree
+        load('www/Tree_IE.RData')
+        tree_choice <-  IE_tree
+        binary_traits <- UTO_Society_data_with_binary_conversions}
+      if("Pama-Nyungan" == input$tree_choose_1){
+        load('www/UTO_Society_data_with_binary_conversions.Rdata')
+        load('www/Tree_Pama_Nyungan.RData')
+        tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
       if("Austronisian" == input$tree_choose_1){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
@@ -401,8 +415,13 @@ shinyServer(function(input, output, session) {
         binary_traits <- BANTU_Society_data_with_binary_conversions}
       if("Indo-european" == input$tree_choose_1){
         load('www/UTO_Society_data_with_binary_conversions.Rdata')
-        load('www/Tree_Uto_trimmed.RData')
-        tree_choice <- uto_tree
+        load('www/Tree_IE.RData')
+        tree_choice <-  IE_tree
+        binary_traits <- UTO_Society_data_with_binary_conversions}
+      if("Pama-Nyungan" == input$tree_choose_1){
+        load('www/UTO_Society_data_with_binary_conversions.Rdata')
+        load('www/Tree_Pama_Nyungan.RData')
+        tree_choice <- pama_nyungan_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
       if("Austronisian" == input$tree_choose_1){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
@@ -437,27 +456,32 @@ shinyServer(function(input, output, session) {
     
     
     output$trait_binary_bar_2 <- renderPlot({
-      if("Full" == input$tree_choose_1){
+      if("Full" == input$tree_choose_2){
         load('www/FULL_TREE_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_FULL_trimmed.Rdata')
         tree_choice <- full_tree
         binary_traits <- FULL_TREE_Society_data_with_binary_conversions}
-      if("Uto" == input$tree_choose_1){
+      if("Uto" == input$tree_choose_2){
         load('www/UTO_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_Uto_trimmed.RData')
         tree_choice <- uto_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Bantu" == input$tree_choose_1){
+      if("Bantu" == input$tree_choose_2){
         load('www/BANTU_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_Bantu_trimmed.RData')
         tree_choice <- bantu_tree
         binary_traits <- BANTU_Society_data_with_binary_conversions}
-      if("Indo-european" == input$tree_choose_1){
+      if("Indo-european" == input$tree_choose_2){
         load('www/UTO_Society_data_with_binary_conversions.Rdata')
-        load('www/Tree_Uto_trimmed.RData')
-        tree_choice <- uto_tree
+        load('www/Tree_IE.RData')
+        tree_choice <-  IE_tree
         binary_traits <- UTO_Society_data_with_binary_conversions}
-      if("Austronisian" == input$tree_choose_1){
+      if("Pama-Nyungan" == input$tree_choose_2){
+        load('www/UTO_Society_data_with_binary_conversions.Rdata')
+        load('www/Tree_Pama_Nyungan.RData')
+        tree_choice <- pama_nyungan_tree
+        binary_traits <- UTO_Society_data_with_binary_conversions}
+      if("Austronisian" == input$tree_choose_2){
         load('www/AUSTRONESIAN_Society_data_with_binary_conversions.Rdata')
         load('www/Tree_austronisian_trimmed.RData')
         tree_choice <- aus_tree
