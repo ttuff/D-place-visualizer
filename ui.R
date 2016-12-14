@@ -12,7 +12,7 @@ r_colors <- rgb(t(col2rgb(colors()) / 255))
 names(r_colors) <- colors()
 
 shinyUI(dashboardPage( skin="black", 
-  dashboardHeader(title = "p-place visualizer"),
+  dashboardHeader(title = "D-place visualizer"),
   dashboardSidebar(
     sidebarMenu(disable=TRUE,
                 menuItem("Traits as binary", tabName = "leaflet", icon = icon("book"))
