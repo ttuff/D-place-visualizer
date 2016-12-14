@@ -2,9 +2,7 @@ require(shiny)
 require(shinydashboard)
 require(raster)
 require(ape)
-require(phytools)
 require(spdep)
-require(mapview)
 require(leaflet)
 require(RColorBrewer)
 
@@ -22,13 +20,14 @@ shinyUI(dashboardPage( skin="black",
     )
   ),
   dashboardBody(
-
+    mainPanel(tags$h4("This app works best in full screen in a web browser")),
     tabItems( 
 
       tabItem(tabName ="leaflet",
+              
               fluidRow(
                 tags$style(type = "text/css", "html, body {width:100%;height:100%}"),
-        
+                
                 column(6,box(leafletOutput("mymap_1", width="100%", height=300), 
                              #plotOutput("Traits_on_trees_1", width = "100%", height = "300px"),
                              #plotOutput("trait_binary_bar_1", width = "100%", height = "300px")
