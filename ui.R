@@ -20,7 +20,8 @@ shinyUI(dashboardPage( skin="black",
     )
   ),
   dashboardBody(
-    mainPanel(tags$h4("This app works best in full screen in a web browser")),
+    mainPanel(tags$h4("This app works best in full screen."),
+              tags$h4("Click on points to view language names and trait lists.")),
     tabItems( 
 
       tabItem(tabName ="leaflet",
